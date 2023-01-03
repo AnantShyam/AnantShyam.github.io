@@ -1,0 +1,63 @@
+html{
+    scroll-behavior: smooth;
+}
+
+div {
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+header {
+    display: flex;
+    /*position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+
+
+    justify-content: center;
+    position: sticky;
+    align-items: center;
+
+
+    background-color: rgba(7, 18, 83, 0.582);
+}
+
+header ul {
+    padding: 0; 
+
+    display: flex;
+    list-style: none;
+    margin: 25px 0px;
+    opacity: 0.9;
+}
+
+header ul li{
+    font-family: century;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 25px;
+}
+
+#home {
+    line-height: 3em;
+}
+
+section {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 50px;
+    
+}
