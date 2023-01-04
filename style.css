@@ -5,26 +5,23 @@ html{
 div {
     padding-left: 75px;
     padding-right: 75px;
-    padding-top: 75px;
+    padding-top: 25px;
     padding-bottom: 75px;
 }
 
 header {
     display: flex;
-    /*position: fixed; */
     top: 0;
     left: 0;
     right: 0;
     height: 50px;
     line-height: 50px;
 
-
     justify-content: center;
     position: sticky;
     align-items: center;
 
-
-    background-color: rgba(7, 18, 83, 0.582);
+    background-color: rgba(29, 10, 230, 0.582);
 }
 
 header ul {
@@ -49,7 +46,7 @@ header ul li a{
 }
 
 #home {
-    line-height: 3em;
+    line-height: 2.5em;
 }
 
 section {
