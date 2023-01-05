@@ -1,0 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    text-align: center;
+}
+
+div {
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 25px;
+    padding-bottom: 75px;
+}
