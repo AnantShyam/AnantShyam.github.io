@@ -46,7 +46,7 @@ header ul li a{
 }
 
 #home {
-    line-height: 2.5em;
+    line-height: 1.5em;
 }
 
 section {
@@ -58,3 +58,27 @@ footer {
     padding: 50px;
     
 }
+
+.container {
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+    width: 100%;
+   }
+   
+   img {
+     max-width: 150%;
+     max-height:150%;
+     /* float: left; */
+   }
+   
+   .text {
+     font-size: 20px;
+     padding-left: 20px;
+     line-height: 20px;
+     padding-top: 20;
+     float: left;
+     width: 600px;
+     
+   }
