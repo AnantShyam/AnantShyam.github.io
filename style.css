@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&display=swap');
 
 body {
-  font-family: 'Merriweather', serif;
+  font-family: 'Georgia', serif;
   margin: 0;
   padding: 2rem;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -226,5 +226,31 @@ footer {
     .experience-text {
       flex: none;
     }
+  }
+
+  * {
+    font-family: Georgia, serif !important;
+  }
+  
+  .news-section {
+    background-color: #f0f4f8;
+    border-left: 4px solid #3b82f6; /* blue accent */
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    font-family: 'Georgia', serif;
+  }
+  
+  .news-section h3 {
+    color: #1e40af; /* darker blue */
+  }
+  
+  .news-section ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+  
+  .news-section li {
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
   }
   
