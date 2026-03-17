@@ -10,6 +10,13 @@ body {
   min-height: 100vh;
 }
 
+#kz1ihy
+.pub-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
 .container {
   max-width: 850px;
   margin: auto;
@@ -26,6 +33,15 @@ body {
   gap: 1.2rem;
   margin-bottom: 2.5rem;
   flex-wrap: wrap;
+}
+
+.pub-title{
+  color:#1f4aa8 !important;
+  font-weight:600;
+}
+
+.pub-authors{
+  color:#333;
 }
 
 .profile-pic {
@@ -229,7 +245,7 @@ footer {
   }
 
   * {
-    font-family: Georgia, serif !important;
+    font-family: Georgia, serif;
   }
   
   .news-section {
