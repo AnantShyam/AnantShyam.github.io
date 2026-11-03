@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anant Shyam | Purdue University</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --navy: #183b63;
+    --blue: #2864a5;
+    --text: #303846;
+    --muted: #697586;
+    --border: #e5e9ef;
+    --light: #f7f9fc;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 45px 45px 70px;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.75;
+    font-size: 15px;
+}
+
+/* Header */
+
+.header {
+    text-align: center;
+    padding-bottom: 18px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid var(--border);
+}
+
+.header h1 {
+    font-size: 2.15rem;
+    letter-spacing: -1.1px;
+    color: #172b43;
+    margin: 0 0 10px;
+    font-weight: 700;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.links a {
+    display: inline-block;
+    padding: 5px 13px;
+    border: 1px solid #dce4ee;
+    border-radius: 5px;
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.links a:hover {
+    background: var(--navy);
+    color: white;
+    border-color: var(--navy);
+}
+
+/* Profile and introduction text */
+
+.intro-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.profile-img {
+    width: 155px;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 9px;
+    flex-shrink: 0;
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Sections */
+
+section {
+    margin-top: 39px;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: #172b43;
+    margin: 0 0 19px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+h3 {
+    font-size: 15px;
+    color: var(--navy);
+    margin: 22px 0 8px;
+    font-weight: 600;
+}
+
+p {
+    margin: 0 0 12px;
+}
+
+a {
+    color: var(--blue);
+}
+
+/* News */
+
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-list li {
+    position: relative;
+    padding: 5px 0 9px 19px;
+    border-left: 2px solid #e1e8f0;
+    margin-left: 5px;
+}
+
+.news-list li::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 13px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--blue);
+}
+
+.news-date {
+    font-weight: 600;
+    color: var(--navy);
+}
+
+/* Papers */
+
+.paper {
+    background: var(--light);
+    border: 1px solid #edf0f4;
+    border-radius: 7px;
+    padding: 17px 20px;
+    margin-bottom: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.paper:hover {
+    border-color: #c5d4e6;
+}
+
+.paper-title {
+    color: var(--navy);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+.paper-authors {
+    font-size: 14px;
+    color: #414b59;
+}
+
+.paper-status {
+    color: var(--muted);
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 3px;
+}
+
+.paper-links {
+    margin-top: 9px;
+}
+
+.paper-links a {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 3px 11px;
+    background: #e9f0f8;
+    border-radius: 4px;
+}
+
+.paper-links a:hover {
+    background: #d9e6f5;
+}
+
+.author-note {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 10px;
+}
+
+/* Experience */
+
+.experience-item {
+    margin-bottom: 20px;
+    padding-left: 16px;
+    border-left: 2px solid #e1e8f0;
+}
+
+.experience-title {
+    font-weight: 600;
+    color: #28384c;
+}
+
+.experience-org {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.experience-date {
+    font-size: 13px;
+    color: #8792a1;
+}
+
+/* Teaching and service */
+
+ul.standard-list {
+    padding-left: 21px;
+    margin: 5px 0 0;
+}
+
+ul.standard-list li {
+    padding: 3px 0;
+}
+
+strong {
+    font-weight: 600;
+}
+
+/* Footer */
+
+footer {
+    border-top: 1px solid var(--border);
+    margin-top: 55px;
+    padding-top: 18px;
+    color: #929baa;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+    body {
+        padding: 30px 21px 45px;
+        font-size: 14px;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro-content {
+        gap: 18px;
+    }
+
+    .profile-img {
+        width: 115px;
+        height: 140px;
+    }
+
+    .links {
+        gap: 7px;
+    }
+
+    .links a {
+        padding: 4px 9px;
+        font-size: 12px;
+    }
+
+    section {
+        margin-top: 32px;
+    }
+
+    .paper {
+        padding: 14px 15px;
+    }
+}
+
+@media (max-width: 420px) {
+    .intro-content {
+        flex-direction: column;
+    }
+
+    .profile-img {
+        width: 125px;
+        height: 145px;
+    }
+}
+
+a {
+    color: #1f4aa8;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #163675;
+    text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+    <h1>Anant Shyam</h1>
+
+    <div class="links">
+        <a href="mailto:shyama@purdue.edu">Email</a>
+        <a href="https://github.com/AnantShyam">GitHub</a>
+        <a href="https://www.linkedin.com/in/anantshyam/">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=oOo0LqoAAAAJ&hl=en">Google Scholar</a>
+    </div>
+</div>
+
+
+<!-- PROFILE -->
+
+<div class="intro-content">
+    <img src="anant.png" alt="Anant Shyam" class="profile-img">
+
+    <div class="intro-text">
+        <p>
+            I am a Computer Science PhD student at <a href="https://www.cs.purdue.edu/" target="_blank" rel="noopener noreferrer">Purdue University</a>, where I am fortunate
+            to work with <a href="https://bbullins.github.io/" target="_blank" rel="noopener noreferrer">Brian Bullins</a> 
+            and <a href="https://ruqizhang.github.io/" target="_blank" rel="noopener noreferrer">Ruqi Zhang</a>. My research
+            focuses on efficient optimization and sampling algorithms for
+            machine learning. I'm fortunate to be supported by the NSF ACCESS
+            program for my project on low precision sampling algorithms for
+            large scale training. Previously, I was an undergraduate at
+            <a href="https://www.cs.cornell.edu/" target="_blank" rel="noopener noreferrer">Cornell University</a>, 
+            where I worked with <a href="https://www.csl.cornell.edu/~zhiruz/" target="_blank" rel="noopener noreferrer">Zhiru Zhang</a> and
+            <a href="https://www.cs.cornell.edu/~cdesa/" target="_blank" rel="noopener noreferrer">Chris De Sa</a>.
+        </p>
+
+        <p>
+            In my free time, I enjoy running and lifting. Please feel free
+            to reach out!
+        </p>
+    </div>
+</div>
+
+
+<!-- NEWS -->
+
+<section>
+    <h2>News</h2>
+
+    <ul class="news-list">
+        <li>
+            <span class="news-date">Jan 2026:</span>
+            Received the NSF ACCESS Discover Project Award for my project
+            on Low Precision Sampling for Large Scale Training.
+        </li>
+
+        <li>
+            <span class="news-date">Aug 2025:</span>
+            Started my PhD in Computer Science at Purdue.
+        </li>
+
+        <li>
+            <span class="news-date">May 2025:</span>
+            Graduated from Cornell University with a Bachelor of Science
+            Honors in Computer Science and a minor in Mathematics,
+            with Magna Cum Laude distinction.
+        </li>
+    </ul>
+</section>
+
+
+<!-- PAPERS -->
+
+<section>
+    <h2>Papers</h2>
+
+    <div class="paper">
+        <div class="paper-title">
+            Bias-Reduced and Parallel Heavy-Tailed Stochastic Convex
+            Optimization in ℓ<sub>p</sub> Geometries
+        </div>
+
+        <div class="paper-authors">
+            Zhengyun Nie*, <strong>Anant Shyam*</strong>, Brian Bullins
+        </div>
+
+        <div class="paper-status">
+            Under Review at STOC 2027
+        </div>
+
+        <div class="paper-links">
+            <a href="https://github.com/AnantShyam/AnantShyam.github.io/blob/main/papers/pnorm_parallel_sco.pdf"
+               target="_blank" rel="noopener noreferrer">Paper ↗</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            On the Limits of Biased Derivative Information for
+            Nonconvex Stochastic Optimization
+        </div>
+
+        <div class="paper-authors">
+            <strong>Anant Shyam</strong>, Brian Bullins
+        </div>
+
+        <div class="paper-status">
+            arXiv, 2026
+        </div>
+
+        <div class="paper-links">
+            <a href="https://arxiv.org/abs/2606.19553"
+               target="_blank" rel="noopener noreferrer">Paper ↗</a>
+        </div>
+    </div>
+
+    <div class="author-note">
+        * Denotes alphabetical order.
+    </div>
+</section>
+
+
+<!-- INDUSTRY EXPERIENCE -->
+
+<section>
+    <h2>Industry Experience</h2>
+
+    <div class="experience-item">
+        <div class="experience-title">
+            Engineering Development Intern
+        </div>
+        <div class="experience-org">
+            MathWorks — Financial Modeling and Econometrics Team
+        </div>
+        <div class="experience-date">
+            May 2024 – August 2024
+        </div>
+    </div>
+
+    <div class="experience-item">
+        <div class="experience-title">
+            Software Engineer Intern
+        </div>
+        <div class="experience-org">
+            Cleo — Product Development Team
+        </div>
+        <div class="experience-date">
+            June 2023 – August 2023
+        </div>
+    </div>
+
+    <div class="experience-item">
+        <div class="experience-title">
+            Software Engineer Intern
+        </div>
+        <div class="experience-org">
+            Interactive Brokers — Risk Management Team
+        </div>
+        <div class="experience-date">
+            June 2022 – August 2022
+        </div>
+    </div>
+</section>
+
+
+<!-- TEACHING -->
+
+<section>
+    <h2>Teaching</h2>
+
+    <h3>Purdue University</h3>
+
+    <ul class="standard-list">
+        <li>
+            TA, CS 180 – Problem Solving and Object-Oriented Programming
+            (Fall 2025, Spring 2026)
+        </li>
+    </ul>
+
+    <h3>Cornell University</h3>
+
+    <ul class="standard-list">
+        <li>
+            TA, CS 4789/5789 – Introduction to Reinforcement Learning
+            (Spring 2025)
+        </li>
+
+        <li>
+            TA, CS 4414 – Systems Programming (Fall 2024)
+        </li>
+
+        <li>
+            TA, CS 4820 – Introduction to Analysis of Algorithms
+            (Summer 2024)
+        </li>
+
+        <li>
+            TA, CS 3110 – Data Structures and Functional Programming
+            (<strong>Outstanding TA Award Recipient</strong>)
+            (Spring 2024)
+        </li>
+
+        <li>
+            Consultant, CS 3110 – Data Structures and Functional
+            Programming (Fall 2023)
+        </li>
+
+        <li>
+            Consultant, CS 2110 – Object-Oriented Programming and
+            Data Structures (Spring 2023)
+        </li>
+
+        <li>
+            Consultant, CS 1110 – Introduction to Computing using
+            Python (Fall 2022)
+        </li>
+    </ul>
+</section>
+
+
+<!-- SERVICE -->
+
+<section>
+    <h2>Service</h2>
+
+    <ul class="standard-list">
+        <li>Reviewer, SPIGM Workshop at ICML 2026</li>
+        <li>Reviewer, SPIGM Workshop at NeurIPS 2025</li>
+    </ul>
+</section>
+
+
+<footer>
+    Last Updated in November 2026.
+</footer>
+
+</body>
+</html>
